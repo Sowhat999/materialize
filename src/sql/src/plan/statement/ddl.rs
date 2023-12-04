@@ -130,6 +130,10 @@ const MAX_NUM_COLUMNS: usize = 256;
 const MANAGED_REPLICA_PATTERN: once_cell::sync::Lazy<regex::Regex> =
     once_cell::sync::Lazy::new(|| regex::Regex::new(r"^r(\d)+$").unwrap());
 
+fn is_name_valid(name: &str) -> bool {
+    name != "." && name != ".."
+}
+
 pub fn describe_create_database(
     _: &StatementContext,
     _: CreateDatabaseStatement,
@@ -408,6 +412,17 @@ pub fn plan_create_webhook_source(
         validate_using,
         in_cluster,
     } = stmt;
+
+    let name_str = name
+        .0
+        .iter()
+        .map(|ident| ident.to_string())
+        .collect::<Vec<_>>()
+        .join(".");
+
+    if !is_name_valid(&name_str) {
+        return Err(PlanError::InvalidWebhookField);
+    }
 
     let validate_using = validate_using
         .map(|stmt| query::plan_webhook_validate_using(scx, stmt))
