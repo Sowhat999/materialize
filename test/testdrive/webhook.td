@@ -331,14 +331,9 @@ SELECT id FROM mz_sources WHERE name = 'webhook_bytes';
 > SELECT COUNT(*) FROM mz_internal.mz_storage_shards WHERE object_id = '${webhook-source-id}';
 0
 
+# Test cases for invalid characters in webhook names
+! CREATE SOURCE "test&" IN CLUSTER webhook_cluster FROM WEBHOOK BODY FORMAT TEXT;
+exact:webhook names must be alphanumeric, plus underscores, dashes and forward slashes
+
 # Cleanup.
 > DROP CLUSTER webhook_cluster CASCADE;
-
-# Test cases for invalid characters in webhook names
-! CREATE SOURCE "webhook_invalid_1" IN CLUSTER webhook_cluster FROM WEBHOOK BODY FORMAT TEXT NAME ".";
-
-! CREATE SOURCE "webhook_invalid_2" IN CLUSTER webhook_cluster FROM WEBHOOK BODY FORMAT TEXT NAME "..";
-
-! CREATE SOURCE "webhook_invalid_3" IN CLUSTER webhook_cluster FROM WEBHOOK BODY FORMAT TEXT NAME "test..";
-
-! CREATE SOURCE "webhook_invalid_4" IN CLUSTER webhook_cluster FROM WEBHOOK BODY FORMAT TEXT NAME ".test";

@@ -346,8 +346,8 @@ After the source is created, you can connect with EventBridge. Follow
 using the shared secret specified in the `CHECK` statement (`x-mz-api-key`) as
 the **API key name** for request validation.
 
-## Invalid characters
-Incorporating certain characters into the database name, schema name or webhook name will lead to odd failure modes. For this reason, names incorporating '.', '..' or CRLF (character return  / line feed) are not allowed and will return an error.
+## Allowed characters
+Only alphanumeric characters, underscores and backslashes are valid within webhook names.
 
 ## Related pages
 

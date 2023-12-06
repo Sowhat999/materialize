@@ -26,25 +26,13 @@ use bytes::Bytes;
 use http::StatusCode;
 use thiserror::Error;
 
-// Validate webhook does not contain invalid characters
-fn is_name_valid(name: &&str) -> bool {
-    let name = *name;
-    !(name == "." || name == ".." || name.contains('\r') || name.contains('\n'))
-}
-
 pub async fn handle_webhook(
     State(client): State<mz_adapter::Client>,
     Path((database, schema, name)): Path<(String, String, String)>,
     headers: http::HeaderMap,
     body: Bytes,
 ) -> impl IntoResponse {
-    // Validate names
-    if [database.as_str(), schema.as_str(), name.as_str()]
-        .iter()
-        .all(is_name_valid)
-    {
-        return Err(WebhookError::InvalidName);
-    }
+
     // Record the time we receive the request, for use if validation checks the current timestamp.
     let received_at = client.now();
     let conn_id = client.new_conn_id().context("allocate connection id")?;
@@ -208,8 +196,6 @@ pub enum WebhookError {
     InternalAdapterError(AdapterError),
     #[error("internal failure! {0:?}")]
     Internal(#[from] anyhow::Error),
-    #[error("invalid characters . or .. in webhook source fields")]
-    InvalidName,
 }
 
 impl From<StorageError> for WebhookError {
@@ -260,9 +246,6 @@ impl IntoResponse for WebhookError {
         match self {
             e @ WebhookError::NotFound(_) | e @ WebhookError::SecretMissing => {
                 (StatusCode::NOT_FOUND, e.to_string()).into_response()
-            }
-            e @ WebhookError::InvalidName => {
-                (StatusCode::BAD_REQUEST, e.to_string()).into_response()
             }
             e @ WebhookError::Unsupported(_)
             | e @ WebhookError::InvalidBody { .. }
