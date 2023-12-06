@@ -132,7 +132,9 @@ const MANAGED_REPLICA_PATTERN: once_cell::sync::Lazy<regex::Regex> =
 
 // Validate webhook does not contain invalid characters
 fn is_valid_name(name: &Ident) -> bool {
-    name.as_str().chars().all(|c| c.is_alphanumeric() || c == '_' || c == '/')
+    name.as_str()
+        .chars()
+        .all(|c| c.is_alphanumeric() || c == '_' || c == '/')
 }
 
 pub fn describe_create_database(
@@ -414,7 +416,11 @@ pub fn plan_create_webhook_source(
         in_cluster,
     } = stmt;
 
-    if !is_valid_name(name.0.last().ok_or_else(|| sql_err!("webhook should have a name"))?) {
+    if !is_valid_name(
+        name.0
+            .last()
+            .ok_or_else(|| sql_err!("webhook should have a name"))?,
+    ) {
         return Err(PlanError::InvalidWebhookName);
     }
 
