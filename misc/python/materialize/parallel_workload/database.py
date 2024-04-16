@@ -74,9 +74,7 @@ def naughtify(name: str) -> str:
 
     strings = naughty_strings()
     # This rng is just to get a more interesting integer for the name
-    index = sum([10**i * c for i, c in enumerate(name.encode("utf-8"))]) % len(
-        strings
-    )
+    index = sum([10**i * c for i, c in enumerate(name.encode("utf-8"))])
     # Keep them short so we can combine later with other identifiers, 255 char limit
     return f"{name}_{strings[index].encode('utf-8')[:16].decode('utf-8', 'ignore')}"
 
@@ -688,8 +686,8 @@ class ClusterReplica:
     def create(self, exe: Executor) -> None:
         # TODO: More Cluster Replica settings
         exe.execute(
-            f"CREATE CLUSTER REPLICA {self.cluster}.{self} SIZE = '{self.size}'"
-        )
+            f"CREATE CLUSTER REPLICA {self.cluster}.{self} SIZE = ?", 
+        (self.size, ))
 
 
 class Cluster:
@@ -791,7 +789,6 @@ class Database:
         self.complexity = complexity
         self.scenario = scenario
         self.seed = seed
-        NAUGHTY_IDENTIFIERS = naughty_identifiers
         self.fast_startup = fast_startup
 
         self.dbs = [DB(seed, i) for i in range(rng.randint(1, MAX_INITIAL_DBS))]

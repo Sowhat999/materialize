@@ -461,7 +461,7 @@ def main() -> int:
         # TODO: Currently the same as mzcompose default settings, add
         # more settings and shuffle them
         for key, value in DEFAULT_SYSTEM_PARAMETERS.items():
-            cur.execute(f"ALTER SYSTEM SET {key} = '{value}'")
+            cur.execute(f"ALTER SYSTEM SET {key} = ?", (value, ))
     system_conn.close()
 
     random.seed(args.seed)

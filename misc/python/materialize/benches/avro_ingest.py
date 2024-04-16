@@ -135,11 +135,11 @@ def main() -> None:
     conn.autocommit = True
     with conn.cursor() as cur:
         cur.execute(
-            f"""CREATE CONNECTION IF NOT EXISTS csr_conn
+            """CREATE CONNECTION IF NOT EXISTS csr_conn
             TO CONFLUENT SCHEMA REGISTRY (
-                URL 'http://{args.confluent_host}:8081'
-            )"""
-        )
+                URL ?
+            )""", 
+        ('http://{0}:8081'.format(args.confluent_host), ))
         cur.execute(
             f"""CREATE CONNECTION kafka_conn
             TO KAFKA (BROKER '{args.confluent_host}:9092', SECURITY PROTOCOL PLAINTEXT)"""
