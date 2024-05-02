@@ -24,7 +24,8 @@ lock: threading.Lock
 
 def initialize_logging() -> None:
     global logging, lock
-    logging = open("parallel-workload-queries.log", "w")
+    with open("parallel-workload-queries.log", "w") as logging:
+        pass
     lock = threading.Lock()
 
 
