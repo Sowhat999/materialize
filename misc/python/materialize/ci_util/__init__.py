@@ -68,7 +68,7 @@ def upload_junit_report(suite: str, junit_report: Path) -> None:
                 },
                 "data": junit_report.read_text(),
             },
-        )
+        timeout=60)
     except Exception as e:
         print(f"Got exception when uploading analytics: {e}")
     else:
@@ -100,7 +100,7 @@ def get_artifacts() -> Any:
         f"https://agent.buildkite.com/v3/builds/{build_id}/artifacts/search",
         params=payload,
         headers={"Authorization": f"Token {token}"},
-    )
+    timeout=60)
 
     if res.status_code != 200:
         print(f"Failed to get artifacts: {res.status_code} {res.text}")

@@ -312,7 +312,7 @@ def get_known_issues_from_github_page(page: int = 1) -> Any:
     response = requests.get(
         f'https://api.github.com/search/issues?q=repo:MaterializeInc/materialize%20type:issue%20in:body%20"ci-regexp%3A"&per_page=100&page={page}',
         headers=headers,
-    )
+    timeout=60)
 
     if response.status_code != 200:
         raise ValueError(f"Bad return code from GitHub: {response.status_code}")

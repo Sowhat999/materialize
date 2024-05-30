@@ -31,7 +31,7 @@ def get(
 
     fetch_count = 0
     while True:
-        r = requests.get(headers=headers, url=url, params=params)
+        r = requests.get(headers=headers, url=url, params=params, timeout=60)
         result = r.json()
         fetch_count += 1
 

@@ -30,7 +30,7 @@ def wait_for_confluent(host: str) -> None:
     while True:
         try:
             print(f"Checking if schema registry at {url} is accessible...")
-            r = requests.get(url)
+            r = requests.get(url, timeout=60)
             if r.status_code == 200:
                 print("Schema registry is ready")
                 return

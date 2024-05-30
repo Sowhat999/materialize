@@ -124,7 +124,7 @@ def build_all(
 def _query_npm_version(name: str, version: str) -> requests.Response:
     """Queries NPM for a specific version of the package."""
     quoted = urllib.parse.quote(name)
-    return requests.get(f"https://registry.npmjs.org/{quoted}/{version}")
+    return requests.get(f"https://registry.npmjs.org/{quoted}/{version}", timeout=60)
 
 
 def get_latest_version(name: str) -> VersionInfo | None:

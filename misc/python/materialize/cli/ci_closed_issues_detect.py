@@ -125,7 +125,7 @@ def is_issue_closed_on_github(repository: str, issue_id: int) -> bool:
         headers["Authorization"] = f"Bearer {token}"
 
     url = f"https://api.github.com/repos/{repository}/issues/{issue_id}"
-    response = requests.get(url, headers=headers)
+    response = requests.get(url, headers=headers, timeout=60)
 
     if response.status_code != 200:
         raise ValueError(

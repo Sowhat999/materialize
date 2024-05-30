@@ -1609,8 +1609,8 @@ class HttpPostAction(Action):
             try:
                 source.num_rows += 1
                 result = requests.post(
-                    url, data=payload.encode("utf-8"), headers=headers
-                )
+                    url, data=payload.encode("utf-8"), headers=headers, 
+                timeout=60)
                 if result.status_code != 200:
                     raise QueryError(f"{result.status_code}: {result.text}", log)
             except (requests.exceptions.ConnectionError):
