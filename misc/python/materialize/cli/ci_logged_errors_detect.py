@@ -17,9 +17,8 @@ import re
 import sys
 from typing import Any
 
-import requests
-
 from materialize import ci_util, spawn, ui
+from security import safe_requests
 
 CI_RE = re.compile("ci-regexp: (.*)")
 CI_APPLY_TO = re.compile("ci-apply-to: (.*)")
@@ -309,8 +308,7 @@ def get_known_issues_from_github_page(page: int = 1) -> Any:
     if token := os.getenv("GITHUB_TOKEN"):
         headers["Authorization"] = f"Bearer {token}"
 
-    response = requests.get(
-        f'https://api.github.com/search/issues?q=repo:MaterializeInc/materialize%20type:issue%20in:body%20"ci-regexp%3A"&per_page=100&page={page}',
+    response = safe_requests.get(f'https://api.github.com/search/issues?q=repo:MaterializeInc/materialize%20type:issue%20in:body%20"ci-regexp%3A"&per_page=100&page={page}',
         headers=headers,
     )
 

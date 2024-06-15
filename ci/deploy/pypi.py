@@ -12,9 +12,8 @@ import os
 import sys
 from pathlib import Path
 
-import requests
-
 from materialize import spawn
+from security import safe_requests
 
 PACKAGE_PATHS = [
     "misc/dbt-materialize",
@@ -47,7 +46,7 @@ def main() -> None:
 
 
 def get_released_versions(name: str) -> set[str]:
-    res = requests.get(f"https://pypi.org/pypi/{name}/json")
+    res = safe_requests.get(f"https://pypi.org/pypi/{name}/json")
     res.raise_for_status()
     return set(res.json()["releases"])
 

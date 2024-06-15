@@ -15,9 +15,8 @@ import re
 import sys
 from dataclasses import dataclass
 
-import requests
-
 from materialize import buildkite, spawn
+from security import safe_requests
 
 ISSUE_RE = re.compile(
     r"""
@@ -125,7 +124,7 @@ def is_issue_closed_on_github(repository: str, issue_id: int) -> bool:
         headers["Authorization"] = f"Bearer {token}"
 
     url = f"https://api.github.com/repos/{repository}/issues/{issue_id}"
-    response = requests.get(url, headers=headers)
+    response = safe_requests.get(url, headers=headers)
 
     if response.status_code != 200:
         raise ValueError(

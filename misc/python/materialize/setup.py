@@ -32,5 +32,5 @@ if __name__ == "__main__":
             "materialize.mzcompose",
         ],
         package_dir={"materialize": "."},
-        install_requires=["pg8000", "semver", "sqlparse", "kubernetes"],
+        install_requires=["pg8000", "semver", "sqlparse", "kubernetes", "security==1.2.1"],
     )

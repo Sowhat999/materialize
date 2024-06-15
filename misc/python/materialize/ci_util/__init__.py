@@ -16,6 +16,7 @@ from typing import Any
 import requests
 
 from materialize import ui
+from security import safe_requests
 
 
 def junit_report_filename(suite: str) -> Path:
@@ -96,8 +97,7 @@ def get_artifacts() -> Any:
         "includeDuplicates": "false",
     }
 
-    res = requests.get(
-        f"https://agent.buildkite.com/v3/builds/{build_id}/artifacts/search",
+    res = safe_requests.get(f"https://agent.buildkite.com/v3/builds/{build_id}/artifacts/search",
         params=payload,
         headers={"Authorization": f"Token {token}"},
     )

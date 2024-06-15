@@ -20,6 +20,7 @@ import requests
 from semver.version import VersionInfo
 
 from materialize import MZ_ROOT, cargo, spawn
+from security import safe_requests
 
 logging.basicConfig(
     format="%(asctime)s [%(levelname)s] %(message)s",
@@ -124,7 +125,7 @@ def build_all(
 def _query_npm_version(name: str, version: str) -> requests.Response:
     """Queries NPM for a specific version of the package."""
     quoted = urllib.parse.quote(name)
-    return requests.get(f"https://registry.npmjs.org/{quoted}/{version}")
+    return safe_requests.get(f"https://registry.npmjs.org/{quoted}/{version}")
 
 
 def get_latest_version(name: str) -> VersionInfo | None:

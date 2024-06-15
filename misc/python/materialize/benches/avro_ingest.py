@@ -23,6 +23,7 @@ from docker.models.containers import Container
 from pg8000.dbapi import ProgrammingError
 
 from materialize import MZ_ROOT, mzbuild, ui
+from security import safe_requests
 
 
 def wait_for_confluent(host: str) -> None:
@@ -30,7 +31,7 @@ def wait_for_confluent(host: str) -> None:
     while True:
         try:
             print(f"Checking if schema registry at {url} is accessible...")
-            r = requests.get(url)
+            r = safe_requests.get(url)
             if r.status_code == 200:
                 print("Schema registry is ready")
                 return

@@ -11,8 +11,7 @@
 
 import os
 from typing import Any
-
-import requests
+from security import safe_requests
 
 BUILDKITE_API_URL = "https://api.buildkite.com/v2"
 
@@ -31,7 +30,7 @@ def get(
 
     fetch_count = 0
     while True:
-        r = requests.get(headers=headers, url=url, params=params)
+        r = safe_requests.get(headers=headers, url=url, params=params)
         result = r.json()
         fetch_count += 1
 
