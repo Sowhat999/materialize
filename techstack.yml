@@ -1,0 +1,1416 @@
+repo_name: Sowhat999/materialize
+report_id: 2bcb6e15a27be7c9b78e5bd4c8913d80
+version: 0.1
+repo_type: Public
+timestamp: '2024-04-15T06:42:20+00:00'
+requested_by: materialize-bot
+provider: github
+branch: main
+detected_tools_count: 102
+tools:
+- name: AWK
+  description: A language for text processing, data extraction and reporting
+  website_url: https://github.com/onetrueawk/awk
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/no-img-open-source.png
+  detection_source_url: https://github.com/Sowhat999/materialize
+  detection_source: Repo Metadata
+- name: Askama
+  description: Type-safe, compiled Jinja-like templates for Rust
+  website_url: https://github.com/djc/askama
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Templating Languages & Extensions
+  image_url: https://img.stackshare.io/service/21280/default_f6f9f80eabfa1648633c4a8cba68c28bd630469a.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/src/environmentd/Cargo.toml
+  detection_source: src/environmentd/Cargo.toml
+  last_updated_by: Matt Jibson
+  last_updated_on: 2023-09-22 13:46:15.000000000 Z
+- name: C lang
+  description: One of the most widely used programming languages of all time
+  website_url: http://en.wikipedia.org/wiki/C_(programming_language)
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/no-img-open-source.png
+  detection_source_url: https://github.com/Sowhat999/materialize
+  detection_source: Repo Metadata
+- name: C#
+  description: Simple, general-purpose, object-oriented programming language for the
+    .NET platform
+  website_url: http://csharp.net
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1015/1200px-C_Sharp_wordmark.svg.png
+  detection_source_url: https://github.com/Sowhat999/materialize
+  detection_source: Repo Metadata
+- name: C++
+  description: Has imperative, object-oriented and generic programming features, while
+    also providing the facilities for low level memory manipulation
+  website_url: http://www.cplusplus.com/
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1049/cplusplus.png
+  detection_source_url: https://github.com/Sowhat999/materialize
+  detection_source: Repo Metadata
+- name: CSS 3
+  description: The latest evolution of the Cascading Style Sheets language
+  website_url: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source_url: https://github.com/Sowhat999/materialize
+  detection_source: Repo Metadata
+- name: Handlebars.js
+  description: Minimal Templating on Steroids
+  website_url: http://handlebarsjs.com/
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Templating Languages & Extensions
+  image_url: https://img.stackshare.io/service/1143/Handlebars.png
+  detection_source_url: https://github.com/Sowhat999/materialize
+  detection_source: Repo Metadata
+- name: Java
+  description: A concurrent, class-based, object-oriented, language specifically designed
+    to have as few implementation dependencies as possible
+  website_url: https://www.java.com
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/995/K85ZWV2F.png
+  detection_source_url: https://github.com/Sowhat999/materialize
+  detection_source: Repo Metadata
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/Sowhat999/materialize
+  detection_source: Repo Metadata
+- name: Python
+  description: A clear and powerful object-oriented programming language, comparable
+    to Perl, Ruby, Scheme, or Java.
+  website_url: https://www.python.org
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/993/pUBY5pVj.png
+  detection_source_url: https://github.com/Sowhat999/materialize
+  detection_source: Repo Metadata
+- name: Ruby
+  description: A dynamic, interpreted, open source programming language with a focus
+    on simplicity and productivity
+  website_url: https://www.ruby-lang.org
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/989/ruby.png
+  detection_source_url: https://github.com/Sowhat999/materialize
+  detection_source: Repo Metadata
+- name: Rust
+  description: A safe, concurrent, practical language
+  website_url: http://www.rust-lang.org/
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1070/v7txhrjp9pdqrkdtxxp0.png
+  detection_source_url: https://github.com/Sowhat999/materialize
+  detection_source: Repo Metadata
+- name: SQL
+  description: It is a domain-specific language used in programming
+  website_url: https://en.wikipedia.org/wiki/SQL
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/2271/default_068d33483bba6b81ee13fbd4dc7aab9780896a54.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/misc/cockroach/setup_materialize.sql
+  detection_source: misc/cockroach/setup_materialize.sql
+  last_updated_by: Nikhil Benesch
+  last_updated_on: 2023-01-03 22:14:06.000000000 Z
+- name: Swift
+  description: An innovative new programming language for Cocoa and Cocoa Touch.
+  website_url: https://developer.apple.com/swift/
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1009/tuHsaI2U.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/src/catalog/Cargo.toml
+  detection_source: src/catalog/Cargo.toml
+  last_updated_by: Joseph Koshakow
+  last_updated_on: 2023-09-13 14:40:29.000000000 Z
+- name: TypeScript
+  description: A superset of JavaScript that compiles to clean JavaScript output
+  website_url: http://www.typescriptlang.org
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1612/bynNY5dJ.jpg
+  detection_source_url: https://github.com/Sowhat999/materialize
+  detection_source: Repo Metadata
+- name: ".NET"
+  description: A free, cross-platform, open source developer platform for building
+    many different types of applications
+  website_url: http://www.microsoft.com/net/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/1014/IoPy1dce_400x400.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/src/adapter/Cargo.toml
+  detection_source: src/adapter/Cargo.toml
+  last_updated_by: Nikhil Benesch
+  last_updated_on: 2019-09-19 19:44:02.000000000 Z
+- name: ".NET Core"
+  description: An Open Source, General-Purpose Development Platform Maintained by
+    Microsoft and the .NET Community
+  website_url: https://docs.microsoft.com/en-us/dotnet/core/
+  version: '5.0'
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/6403/default_91fc1f0ee315262794273aa1387eaf8fed8436e6.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/test/lang/csharp/csharp-npgsql5.csproj
+  detection_source: test/lang/csharp/csharp-npgsql5.csproj
+  last_updated_by: Nikhil Benesch
+  last_updated_on: 2020-10-20 05:30:48.000000000 Z
+- name: ASP.NET Core
+  description: A cross-platform .NET framework for building modern cloud-based web
+    applications on Windows, Mac, or Linux
+  website_url: docs.microsoft.com/en-us/aspnet/core/
+  version: '5.0'
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/11331/asp.net-core.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/test/lang/csharp/csharp-npgsql5.csproj
+  detection_source: test/lang/csharp/csharp-npgsql5.csproj
+  last_updated_by: Nikhil Benesch
+  last_updated_on: 2020-10-20 05:30:48.000000000 Z
+- name: Matplotlib
+  description: A plotting library for the Python programming language
+  website_url: http://matplotlib.org
+  open_source: false
+  hosted_saas: false
+  category: Libraries
+  sub_category: Charting Libraries
+  image_url: https://img.stackshare.io/service/2993/2DZC4KaA_400x400.jpg
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements.txt
+  detection_source: ci/builder/requirements.txt
+  last_updated_by: Rainer Niedermayr
+  last_updated_on: 2023-10-31 15:00:36.000000000 Z
+- name: Node.js
+  description: A platform built on Chrome's JavaScript runtime for easily building
+    fast, scalable network applications
+  website_url: http://nodejs.org/
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/Dockerfile
+  detection_source: ci/builder/Dockerfile
+  last_updated_by: Rami Chowdhury
+  last_updated_on: 2023-08-14 15:59:51.000000000 Z
+- name: React
+  description: A JavaScript library for building user interfaces
+  website_url: https://reactjs.org/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Javascript UI Libraries
+  image_url: https://img.stackshare.io/service/1020/OYIaJ1KK.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/src/environmentd/src/http/static/js/hierarchical-memory.jsx
+  detection_source: src/environmentd/src/http/static/js/hierarchical-memory.jsx
+  last_updated_by: Cara Haas
+  last_updated_on: 2022-10-06 14:47:49.000000000 Z
+- name: Serde
+  description: Serialization framework for Rust
+  website_url: https://serde.rs
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Serialization Frameworks
+  image_url: https://img.stackshare.io/service/11028/no-img-open-source.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/src/adapter/Cargo.toml
+  detection_source: src/adapter/Cargo.toml
+  last_updated_by: Aru Sahni
+  last_updated_on: 2023-05-31 23:29:53.000000000 Z
+- name: Tokio
+  description: Runtime for writing reliable asynchronous applications with Rust
+  website_url: https://tokio.rs/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Concurrency Frameworks
+  image_url: https://img.stackshare.io/service/12187/bC40df3r_400x400.jpg
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/src/adapter/Cargo.toml
+  detection_source: src/adapter/Cargo.toml
+  last_updated_by: Gus Wynn
+  last_updated_on: 2023-09-20 22:43:54.000000000 Z
+- name: Confluent
+  description: A stream data platform to help companies harness their high volume
+    real-time data streams
+  website_url: https://www.confluent.io/
+  open_source: false
+  hosted_saas: true
+  category: Data Stores
+  sub_category: Message Queue
+  image_url: https://img.stackshare.io/service/5862/default_89c3b9968d36020bf2eaaf162d706866b6da195f.jpg
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements.txt
+  detection_source: ci/builder/requirements.txt
+  last_updated_by: Dennis Felsing
+  last_updated_on: 2023-07-05 10:44:10.000000000 Z
+- name: MySQL
+  description: The world's most popular open source database
+  website_url: http://www.mysql.com
+  open_source: true
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Databases
+  image_url: https://img.stackshare.io/service/1025/logo-mysql-170x170.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements.txt
+  detection_source: ci/builder/requirements.txt
+  last_updated_by: Nikhil Benesch
+  last_updated_on: 2021-12-08 15:11:10.000000000 Z
+- name: PostgreSQL
+  description: A powerful, open source object-relational database system
+  website_url: http://www.postgresql.org/
+  version: 0.19.5
+  open_source: true
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Databases
+  image_url: https://img.stackshare.io/service/1028/ASOhU5xJ.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/src/balancerd/Cargo.toml
+  detection_source: ".devcontainer/docker-compose.yml"
+  last_updated_by: Matt Jibson
+  last_updated_on: 2022-07-04 19:15:40.000000000 Z
+- name: SQLAlchemy
+  description: The Python SQL Toolkit and Object Relational Mapper
+  website_url: http://www.sqlalchemy.org/
+  version: 1.3.20
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Object Relational Mapper (ORM)
+  image_url: https://img.stackshare.io/service/1839/q5uAkmy7.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/test/lang/python/requirements.txt
+  detection_source: test/lang/python/requirements.txt
+  last_updated_by: Nikhil Benesch
+  last_updated_on: 2020-12-02 06:40:22.000000000 Z
+- name: rdkafka
+  description: Modern and performant Kafka client library for Ruby
+  website_url: https://github.com/appsignal/rdkafka-ruby/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Kafka Tools
+  image_url: https://ucarecdn.com/7ef15d05-d579-494f-8e94-ceb6b75a6ba1/
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/src/adapter/Cargo.toml
+  detection_source: src/adapter/Cargo.toml
+  last_updated_by: Matt Jibson
+  last_updated_on: 2023-09-22 13:46:15.000000000 Z
+- name: Amazon Elastic Container Registry Public
+  description: Fully managed registry that makes it easy for a developer to publicly
+    share container software
+  website_url: https://docs.aws.amazon.com/AmazonECR/latest/public/what-is-ecr.html
+  open_source: false
+  hosted_saas: true
+  category: Build, Test, Deploy
+  sub_category: Docker Registry
+  image_url: https://img.stackshare.io/service/21672/default_0ad016ae73d6ad4ccc280555965665b100054a7e.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/misc/images/debezium/Dockerfile
+  detection_source: misc/images/debezium/Dockerfile
+  last_updated_by: Nikhil Benesch
+  last_updated_on: 2023-08-11 05:04:57.000000000 Z
+- name: Apache Maven
+  description: Apache build manager for Java projects.
+  website_url: http://maven.apache.org/
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Java Build Tools
+  image_url: https://img.stackshare.io/package_manager/977/default_9833f2ef0bbc2a946b4cc5e9307264033361076b.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/test/lang/java/smoketest/Dockerfile
+  detection_source: test/lang/java/smoketest/Dockerfile
+  last_updated_by: Nikhil Benesch
+  last_updated_on: 2020-07-31 05:09:32.000000000 Z
+- name: Babel
+  description: Use next generation JavaScript, today.
+  website_url: http://babeljs.io/
+  version: 7.23.3
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: JavaScript Compilers
+  image_url: https://img.stackshare.io/service/2739/-1wfGjNw.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/test/lang/js/yarn.lock
+  detection_source: test/lang/js/babel.config.js
+  last_updated_by: Nikhil Benesch
+  last_updated_on: 2021-08-09 14:52:19.000000000 Z
+- name: CMake
+  description: An open-source system that manages the build process
+  website_url: http://www.cmake.org/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Java Build Tools
+  image_url: https://img.stackshare.io/service/2424/0UlUI_y1_400x400.jpg
+  detection_source_url: https://github.com/Sowhat999/materialize
+  detection_source: Repo Metadata
+- name: Docker
+  description: Enterprise Container Platform for High-Velocity Innovation.
+  website_url: https://www.docker.com/
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Virtual Machine Platforms & Containers
+  image_url: https://img.stackshare.io/service/586/n4u37v9t_400x400.png
+  detection_source_url: https://github.com/Sowhat999/materialize
+  detection_source: Repo Metadata
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/Sowhat999/materialize
+  detection_source: Repo Metadata
+- name: GitHub Actions
+  description: Automate your workflow from idea to production
+  website_url: https://github.com/features/actions
+  open_source: false
+  hosted_saas: true
+  category: Build, Test, Deploy
+  sub_category: Continuous Integration
+  image_url: https://img.stackshare.io/service/11563/actions.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/.github/workflows/slack_notify_design_doc.yml
+  detection_source: ".github/workflows/slack_notify_design_doc.yml"
+  last_updated_by: Ufuk Celebi
+  last_updated_on: 2023-09-08 15:50:36.000000000 Z
+- name: Hex
+  description: Package manager for the Erlang ecosystem
+  website_url: https://hex.pm/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/service/5210/6621265.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/src/adapter/Cargo.toml
+  detection_source: src/adapter/Cargo.toml
+  last_updated_by: Nikhil Benesch
+  last_updated_on: 2019-09-19 19:44:02.000000000 Z
+- name: Hyper
+  description: On-Demand Container, Per-Second Billing
+  website_url: https://hyper.sh/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Containers as a Service
+  image_url: https://img.stackshare.io/service/3125/xSVaubUG_400x400.jpg
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/src/balancerd/Cargo.toml
+  detection_source: src/balancerd/Cargo.toml
+  last_updated_by: Matt Jibson
+  last_updated_on: 2023-10-25 19:51:48.000000000 Z
+- name: JUnit
+  description: A programmer-oriented testing framework for Java
+  website_url: http://junit.org/
+  license: EPL-1.0
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Testing Frameworks
+  image_url: https://img.stackshare.io/service/2020/874086.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/test/lang/java/smoketest/pom.xml
+  detection_source: test/lang/java/smoketest/pom.xml
+  last_updated_by: Nikhil Benesch
+  last_updated_on: 2020-07-31 05:09:32.000000000 Z
+- name: Jest
+  description: Painless JavaScript Unit Testing
+  website_url: http://facebook.github.io/jest/
+  version: 27.5.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Javascript Testing Framework
+  image_url: https://img.stackshare.io/service/830/jest.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/test/lang/js/yarn.lock
+  detection_source: test/lang/js/package.json
+  last_updated_by: Nikhil Benesch
+  last_updated_on: 2020-04-11 19:10:39.000000000 Z
+- name: Kubernetes
+  description: Manage a cluster of Linux containers as a single system to accelerate
+    Dev and simplify Ops
+  website_url: http://kubernetes.io/
+  version: 25.3.0
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Container Tools
+  image_url: https://img.stackshare.io/service/1885/21_d3cvM.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements.txt
+  detection_source: ci/builder/requirements.txt
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2022-11-20 20:34:30.000000000 Z
+- name: Nix
+  description: A package manager for Linux and other Unix systems
+  website_url: http://nixos.org/nix
+  license: LGPL-2.1
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/service/4348/ET9J1uY-_400x400.png
+  detection_source_url: https://github.com/Sowhat999/materialize
+  detection_source: Repo Metadata
+- name: NuGet
+  description: The package manager for .NET
+  website_url: https://www.nuget.org/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/service/2637/6I3oEOP4_400x400.jpg
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/src/adapter/Cargo.toml
+  detection_source: src/adapter/Cargo.toml
+  last_updated_by: Nikhil Benesch
+  last_updated_on: 2019-09-19 19:44:02.000000000 Z
+- name: OpenTelemetry
+  description: A single set of APIs, libraries, agents, and collector services to
+    capture distributed traces and metrics from your application
+  website_url: https://opentelemetry.io/
+  open_source: false
+  hosted_saas: false
+  category: Monitoring
+  sub_category: Monitoring Tools
+  image_url: https://img.stackshare.io/service/21211/default_0cd8944735bb1aaffbb5abc2d0e513a253ed615d.jpg
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/src/adapter/Cargo.toml
+  detection_source: src/adapter/Cargo.toml
+  last_updated_by: Roshan Jobanputra
+  last_updated_on: 2023-08-07 18:20:58.000000000 Z
+- name: Prettier
+  description: Prettier is an opinionated code formatter.
+  website_url: https://prettier.io/
+  version: 2.8.8
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Code Review
+  image_url: https://img.stackshare.io/service/7035/default_66f265943abed56bcdbfca1c866a4261b1fbb063.jpg
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/test/lang/js/yarn.lock
+  detection_source: test/lang/js/package.json
+  last_updated_by: Nikhil Benesch
+  last_updated_on: 2020-04-11 19:10:39.000000000 Z
+- name: Prometheus
+  description: An open-source service monitoring system and time series database,
+    developed by SoundCloud
+  website_url: http://prometheus.io/
+  version: 0.13.3
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Monitoring
+  sub_category: Monitoring Tools
+  image_url: https://img.stackshare.io/service/2501/default_3cf1b307194b26782be5cb209d30360580ae5b3c.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/Cargo.lock
+  detection_source: misc/monitoring/grafana/datasources/prometheus.yml
+  last_updated_by: Nikhil Benesch
+  last_updated_on: 2022-12-25 08:11:29.000000000 Z
+- name: PyPI
+  description: A repository of software for the Python programming language
+  website_url: https://pypi.org/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Hosted Package Repository
+  image_url: https://img.stackshare.io/service/12572/-RIWgodF_400x400.jpg
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/test/lang/python/requirements.txt
+  detection_source: test/lang/python/requirements.txt
+  last_updated_by: Nikhil Benesch
+  last_updated_on: 2020-12-02 06:40:22.000000000 Z
+- name: RubyGems
+  description: Easily download, install, and use ruby software packages on your system
+  website_url: https://rubygems.org/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/service/12795/5jL6-BA5_400x400.jpeg
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/test/lang/ruby/Gemfile
+  detection_source: test/lang/ruby/Gemfile
+  last_updated_by: Nikhil Benesch
+  last_updated_on: 2023-11-11 06:45:03.000000000 Z
+- name: Sentry
+  description: See performance issues, fix errors faster, and optimize code health.
+  website_url: https://sentry.io/welcome/?utm_source=stackshare&utm_medium=link&utm_campaign=profile
+  version: 0.29.1
+  open_source: true
+  hosted_saas: true
+  category: Monitoring
+  sub_category: Exception Monitoring
+  image_url: https://img.stackshare.io/service/191/default_9262326592c97828a2a4299dec085a3674dd05f4.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/Cargo.lock
+  detection_source: src/environmentd/Cargo.toml
+  last_updated_by: Parker Timmerman
+  last_updated_on: 2023-02-01 18:23:38.000000000 Z
+- name: Tower
+  description: The most powerful Git client for Mac &amp; Windows
+  website_url: https://www.git-tower.com/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Source Code Management Desktop Apps
+  image_url: https://img.stackshare.io/service/1601/tower-dock-icon_transparent_2x.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/src/environmentd/Cargo.toml
+  detection_source: src/environmentd/Cargo.toml
+  last_updated_by: Roshan Jobanputra
+  last_updated_on: 2023-08-07 18:20:58.000000000 Z
+- name: Yarn
+  description: A new package manager for JavaScript
+  website_url: https://yarnpkg.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/5848/44mC-kJ3.jpg
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/test/lang/js/yarn.lock
+  detection_source: test/lang/js/yarn.lock
+  last_updated_by: Nikhil Benesch
+  last_updated_on: 2020-04-11 19:10:39.000000000 Z
+- name: npm
+  description: The package manager for JavaScript.
+  website_url: https://www.npmjs.com/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/test/lang/js/package.json
+  detection_source: test/lang/js/package.json
+  last_updated_by: Nikhil Benesch
+  last_updated_on: 2020-04-11 19:10:39.000000000 Z
+- name: pip
+  description: A package installer for Python
+  website_url: https://pypi.org/project/pip/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/5559/-RIWgodF_400x400.jpg
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements-core.txt
+  detection_source: ci/builder/requirements-core.txt
+  last_updated_by: Nikhil Benesch
+  last_updated_on: 2021-12-29 18:31:42.000000000 Z
+- name: pytest
+  description: A full-featured Python testing tool to help you write better programs
+  website_url: http://pytest.org/latest/
+  version: 7.2.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Testing Frameworks
+  image_url: https://img.stackshare.io/service/4586/Lu99Qe0Z_400x400.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements.txt
+  detection_source: ci/builder/requirements.txt
+  last_updated_by: nrainer-materialize
+  last_updated_on: 2023-10-30 16:07:59.000000000 Z
+- name: Google App Engine
+  description: Build web applications on the same scalable systems that power Google
+    applications
+  website_url: https://developers.google.com/appengine
+  open_source: false
+  hosted_saas: true
+  category: Application Hosting
+  sub_category: Platform as a Service
+  image_url: https://img.stackshare.io/service/139/s01TMTGn.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/.devcontainer/docker-compose.yml
+  detection_source: ".devcontainer/docker-compose.yml"
+  last_updated_by: Matt Jibson
+  last_updated_on: 2022-07-04 19:15:40.000000000 Z
+- name: CocoaPods
+  description: A dependency manager for Swift and Objective-C Cocoa projects
+  website_url: https://cocoapods.org/
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: CocoaPods Packages
+  image_url: https://img.stackshare.io/service/2426/e1cbdef9d4b11484049a033886578e54_400x400.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/src/catalog/Cargo.toml
+  detection_source: src/catalog/Cargo.toml
+  last_updated_by: Joseph Koshakow
+  last_updated_on: 2023-09-13 14:40:29.000000000 Z
+- name: Debian
+  description: The Universal Operating System
+  website_url: https://www.debian.org/
+  open_source: false
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Operating Systems
+  image_url: https://img.stackshare.io/service/1656/vd4gAekh.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/.devcontainer/Dockerfile
+  detection_source: ".devcontainer/Dockerfile"
+  last_updated_by: Matt Jibson
+  last_updated_on: 2022-07-04 19:15:40.000000000 Z
+- name: Jupyter
+  description: Multi-language interactive computing environments.
+  website_url: http://jupyter.org
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Application Utilities
+  sub_category: Data Science Notebooks
+  image_url: https://img.stackshare.io/service/4190/fGBUdNf__400x400.jpg
+  detection_source_url: https://github.com/Sowhat999/materialize
+  detection_source: Repo Metadata
+- name: NumPy
+  description: Fundamental package for scientific computing with Python
+  website_url: http://www.numpy.org/
+  version: 1.26.1
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Data Science Tools
+  image_url: https://img.stackshare.io/service/2179/default_332f874a2edb2686f578aa6389313efcea1eec41.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements.txt
+  detection_source: ci/builder/requirements.txt
+  last_updated_by: Nikhil Benesch
+  last_updated_on: 2021-12-08 15:11:10.000000000 Z
+- name: OpenSSL
+  description: Full-featured toolkit for the Transport Layer Security and Secure Sockets
+    Layer protocols
+  website_url: https://www.openssl.org/
+  open_source: false
+  hosted_saas: false
+  category: Application Utilities
+  sub_category: Security
+  image_url: https://img.stackshare.io/service/3091/preview.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/src/balancerd/Cargo.toml
+  detection_source: src/balancerd/Cargo.toml
+  last_updated_by: Matt Jibson
+  last_updated_on: 2023-09-22 20:25:53.000000000 Z
+- name: SciPy
+  description: Scientific Computing Tools for Python
+  website_url: http://www.scipy.org
+  version: 1.11.2
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Data Science Tools
+  image_url: https://img.stackshare.io/service/3303/scipyshiny_small.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements.txt
+  detection_source: ci/builder/requirements.txt
+  last_updated_by: Nikhil Benesch
+  last_updated_on: 2021-12-08 15:11:10.000000000 Z
+- name: Shell
+  description: A shell is a text-based terminal, used for manipulating programs and
+    files. Shell scripts typically manage program execution.
+  website_url: https://en.wikipedia.org/wiki/Shell_script
+  open_source: false
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/4631/default_c2062d40130562bdc836c13dbca02d318205a962.png
+  detection_source_url: https://github.com/Sowhat999/materialize
+  detection_source: Repo Metadata
+- name: Stacker
+  description: The Easiest way to Publish &amp; Reply on Social Media
+  website_url: https://www.getstacker.com
+  open_source: false
+  hosted_saas: false
+  category: Support, Sales, and Marketing
+  sub_category: Social Media Tools
+  image_url: https://img.stackshare.io/service/973/_ia45iZH.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/src/ore/Cargo.toml
+  detection_source: src/ore/Cargo.toml
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2022-07-24 22:04:56.000000000 Z
+- name: Timely
+  description: A time tracking app which works to manage your time your way
+  website_url: https://timelyapp.com/
+  open_source: false
+  hosted_saas: false
+  category: Collaboration
+  sub_category: Time Tracking
+  image_url: https://img.stackshare.io/service/10382/AlYVm4bz_400x400.jpg
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/src/adapter/Cargo.toml
+  detection_source: src/adapter/Cargo.toml
+  last_updated_by: Matt Jibson
+  last_updated_on: 2023-09-22 13:46:15.000000000 Z
+- name: Ubuntu
+  description: The leading OS for PC, tablet, phone and cloud
+  website_url: http://www.ubuntu.com/
+  open_source: false
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Operating Systems
+  image_url: https://img.stackshare.io/service/3511/cof_orange_hex.jpg
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/Dockerfile
+  detection_source: ci/builder/Dockerfile
+  last_updated_by: nrainer-materialize
+  last_updated_on: 2023-09-05 08:30:24.000000000 Z
+- name: setuptools
+  website_url: https://github.com/pypa/setuptools
+  open_source: false
+  hosted_saas: false
+  image_url: https://img.stackshare.io/service/10517/647025.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements-core.txt
+  detection_source: ci/builder/requirements-core.txt
+  last_updated_by: Aru Sahni
+  last_updated_on: 2023-11-13 21:33:15.000000000 Z
+- name: cryptography
+  description: Cryptography is a package which provides cryptographic recipes and
+    primitives to Python developers
+  package_url: https://pypi.org/project/cryptography
+  version: 39.0.1
+  license: BSD-3-Clause,Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/19850/default_db2ab2702f70e20c272f6ce65251108fb2b8f1ea.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements.txt
+  detection_source: ci/builder/requirements.txt
+  last_updated_by: Matt Arthur
+  last_updated_on: 2023-05-12 17:47:45.000000000 Z
+  vulnerabilities:
+  - name: cryptography NULL pointer dereference with pkcs12.serialize_key_and_certificates
+      when called with a non-matching certificate and private key and an hmac_hash
+      override
+    cve_id: CVE-2024-26130
+    cve_url: https://github.com/advisories/GHSA-6vqw-3v5j-54x4
+    detected_date: Feb 22
+    severity: high
+    first_patched: 42.0.4
+  - name: Python Cryptography package vulnerable to Bleichenbacher timing oracle attack
+    cve_id: CVE-2023-50782
+    cve_url: https://github.com/advisories/GHSA-3ww4-gg4f-jr7f
+    detected_date: Feb 6
+    severity: high
+    first_patched: 42.0.0
+  - name: Null pointer dereference in PKCS12 parsing
+    cve_id: CVE-2024-0727
+    cve_url: https://github.com/advisories/GHSA-9v9h-cgj8-h64p
+    detected_date: Feb 17
+    severity: moderate
+    first_patched: 42.0.2
+  - name: cryptography vulnerable to NULL-dereference when loading PKCS7 certificates
+    cve_id: CVE-2023-49083
+    cve_url: https://github.com/advisories/GHSA-jfhm-5ghh-2f97
+    detected_date: Nov 29
+    severity: moderate
+    first_patched: 41.0.6
+  - name: Vulnerable OpenSSL included in cryptography wheels
+    cve_id:
+    cve_url: https://github.com/advisories/GHSA-5cpq-8wj7-hf2v
+    detected_date: Jun 3
+    severity: low
+    first_patched: 41.0.0
+  - name: pyca/cryptography's wheels include vulnerable OpenSSL
+    cve_id:
+    cve_url: https://github.com/advisories/GHSA-jm77-qphf-c4w8
+    detected_date: Aug 2
+    severity: low
+    first_patched: 41.0.3
+  - name: Vulnerable OpenSSL included in cryptography wheels
+    cve_id:
+    cve_url: https://github.com/advisories/GHSA-v8gr-m533-ghj9
+    detected_date: Sep 22
+    severity: low
+    first_patched: 41.0.4
+- name: jupyterlab
+  description: The JupyterLab notebook server extension
+  package_url: https://pypi.org/project/jupyterlab
+  version: 4.0.7
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/20376/default_e6c4d6b6295b7d6934a5e16b2a16a7aa07991d65.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements.txt
+  detection_source: ci/builder/requirements.txt
+  last_updated_by: nrainer-materialize
+  last_updated_on: 2023-10-30 16:07:59.000000000 Z
+  vulnerabilities:
+  - name: JupyterLab vulnerable to potential authentication and CSRF tokens leak
+    cve_id: CVE-2024-22421
+    cve_url: https://github.com/advisories/GHSA-44cc-43rp-5947
+    detected_date: Jan 20
+    severity: high
+    first_patched: 4.0.11
+  - name: JupyterLab vulnerable to SXSS in Markdown Preview
+    cve_id: CVE-2024-22420
+    cve_url: https://github.com/advisories/GHSA-4m77-cmpx-vjc4
+    detected_date: Jan 20
+    severity: moderate
+    first_patched: 4.0.11
+- name: black
+  description: The uncompromising code formatter
+  package_url: https://pypi.org/project/black
+  version: 22.12.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/20099/default_029b9bbfb6be2cd34bebeda5b8e1e80a1d22441c.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements.txt
+  detection_source: ci/builder/requirements.txt
+  last_updated_by: Philip Stoev
+  last_updated_on: 2023-08-14 14:44:10.000000000 Z
+  vulnerabilities:
+  - name: Black vulnerable to Regular Expression Denial of Service (ReDoS)
+    cve_id: CVE-2024-21503
+    cve_url: https://github.com/advisories/GHSA-fj7x-q9j7-g6q6
+    detected_date: Mar 21
+    severity: moderate
+    first_patched: 24.3.0
+- name: paramiko
+  description: SSH2 protocol library
+  package_url: https://pypi.org/project/paramiko
+  version: 3.1.0
+  license: LGPL-2.1
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/19896/default_4343f8bba4f6051641ffca8b4fbe9b099402c84d.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements.txt
+  detection_source: ci/builder/requirements.txt
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2023-03-12 23:00:43.000000000 Z
+  vulnerabilities:
+  - name: Prefix Truncation Attack against ChaCha20-Poly1305 and Encrypt-then-MAC
+      aka Terrapin
+    cve_id: CVE-2023-48795
+    cve_url: https://github.com/advisories/GHSA-45x7-px36-x8w8
+    detected_date: Dec 20
+    severity: moderate
+    first_patched: 3.4.0
+- name: requests
+  description: Python HTTP for Humans
+  package_url: https://pypi.org/project/requests
+  version: 2.28.1
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/19826/default_d7c684bf2673f008a9f02ac93901229297a22d7e.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements.txt
+  detection_source: ci/builder/requirements.txt
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2022-12-25 22:01:44.000000000 Z
+  vulnerabilities:
+  - name: Unintended leak of Proxy-Authorization header in requests
+    cve_id: CVE-2023-32681
+    cve_url: https://github.com/advisories/GHSA-j8r2-6x86-q33q
+    detected_date: May 23
+    severity: moderate
+    first_patched: 2.31.0
+- name: PyMySQL
+  description: Pure Python MySQL Driver
+  package_url: https://pypi.org/project/PyMySQL
+  version: 1.0.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/19880/default_3863c7bb51d307217c188e059f67ca417c51efe3.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements.txt
+  detection_source: ci/builder/requirements.txt
+  last_updated_by: Nikhil Benesch
+  last_updated_on: 2021-12-08 15:11:10.000000000 Z
+- name: boto3
+  description: The AWS SDK for Python
+  package_url: https://pypi.org/project/boto3
+  version: 1.26.64
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/19840/default_1c41e593803157c668b26f27387160254f0f5371.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements.txt
+  detection_source: ci/builder/requirements.txt
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2023-03-12 22:57:41.000000000 Z
+- name: click
+  description: Composable command line interface toolkit
+  package_url: https://pypi.org/project/click
+  version: 8.1.3
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/19830/default_74a61b43bdb9fc0cba2978316b9976f43545029b.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements.txt
+  detection_source: ci/builder/requirements.txt
+  last_updated_by: Nikhil Benesch
+  last_updated_on: 2022-05-17 03:19:43.000000000 Z
+- name: colored
+  description: Simple library for color and formatting to terminal
+  package_url: https://pypi.org/project/colored
+  version: 1.4.4
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/20135/default_e1d5d8c03b05acf041445e42683e790a04c8af72.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements.txt
+  detection_source: ci/builder/requirements.txt
+  last_updated_by: Nikhil Benesch
+  last_updated_on: 2022-11-20 15:37:26.000000000 Z
+- name: confluent-kafka
+  description: Confluent's Python client for Apache Kafka
+  package_url: https://pypi.org/project/confluent-kafka
+  version: 2.1.1
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/20152/default_ab08d6ce07ad95669525117e30f51032a6131527.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements.txt
+  detection_source: ci/builder/requirements.txt
+  last_updated_by: Dennis Felsing
+  last_updated_on: 2023-07-05 10:44:10.000000000 Z
+- name: fastavro
+  description: Fast read/write of AVRO files
+  package_url: https://pypi.org/project/fastavro
+  version: 1.8.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/20472/default_9133ac72cd6446db23468e38bad37eb681762f92.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements.txt
+  detection_source: ci/builder/requirements.txt
+  last_updated_by: Joaquin Colacci
+  last_updated_on: 2023-08-03 04:54:42.000000000 Z
+- name: humanize
+  description: Python humanize utilities
+  package_url: https://pypi.org/project/humanize
+  version: 4.4.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/20018/default_8ec0d1f9ddf0a2b7aab003c2af38b977b2f2b1e9.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements.txt
+  detection_source: ci/builder/requirements.txt
+  last_updated_by: Nikhil Benesch
+  last_updated_on: 2022-09-25 22:57:55.000000000 Z
+- name: ipywidgets
+  description: IPython HTML widgets for Jupyter
+  package_url: https://pypi.org/project/ipywidgets
+  version: 8.1.1
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/pypi/image.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements.txt
+  detection_source: ci/builder/requirements.txt
+  last_updated_by: nrainer-materialize
+  last_updated_on: 2023-10-30 16:07:59.000000000 Z
+- name: networkx
+  description: Python package for creating and manipulating graphs and networks
+  package_url: https://pypi.org/project/networkx
+  version: '3.0'
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/19877/default_8902c10687fbcd6273bdbe119fff40fa1180763f.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements.txt
+  detection_source: ci/builder/requirements.txt
+  last_updated_by: Philip Stoev
+  last_updated_on: 2023-04-03 12:48:49.000000000 Z
+- name: pandas
+  description: Powerful data structures for data analysis
+  package_url: https://pypi.org/project/pandas
+  version: 2.1.2
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/19837/default_85689b353a3a9409328e253ea28d859d29151e0c.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements.txt
+  detection_source: ci/builder/requirements.txt
+  last_updated_by: Rainer Niedermayr
+  last_updated_on: 2023-10-31 15:00:27.000000000 Z
+- name: parameterized
+  description: Parameterized testing with any Python test framework
+  package_url: https://pypi.org/project/parameterized
+  version: 0.8.1
+  license: BSD-2-Clause-FreeBSD
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/pypi/image.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements.txt
+  detection_source: ci/builder/requirements.txt
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2023-03-12 23:00:43.000000000 Z
+- name: pg8000
+  description: PostgreSQL interface library
+  package_url: https://pypi.org/project/pg8000
+  version: 1.30.3
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/pypi/image.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements.txt
+  detection_source: ci/builder/requirements.txt
+  last_updated_by: nrainer-materialize
+  last_updated_on: 2023-11-03 11:29:27.000000000 Z
+- name: psutil
+  description: Cross-platform lib for process and system monitoring in Python
+  package_url: https://pypi.org/project/psutil
+  version: 5.9.4
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/19851/default_ac77a75c05474acf9389d56b1f5cc8241af4c384.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements.txt
+  detection_source: ci/builder/requirements.txt
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2023-03-12 22:58:55.000000000 Z
+- name: psycopg2
+  description: Psycopg2 - Python-PostgreSQL Database Adapter
+  package_url: https://pypi.org/project/psycopg2
+  version: 2.9.9
+  license: BSD-3-Clause-Attribution
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/20416/default_64aa60b33468d1d28611966765867676f6303b64.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/test/lang/python/requirements.txt
+  detection_source: test/lang/python/requirements.txt
+  last_updated_by: Aru Sahni
+  last_updated_on: 2023-11-13 21:33:15.000000000 Z
+- name: pydantic
+  description: Data validation and settings management using python 3.6 type hinting
+  package_url: https://pypi.org/project/pydantic
+  version: 1.10.4
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/20022/default_b0d1a54f127d7017fce41c15f5e85568fb7019ed.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements.txt
+  detection_source: ci/builder/requirements.txt
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2023-01-01 22:01:32.000000000 Z
+- name: pyelftools
+  description: Library for analyzing ELF files and DWARF debugging information
+  package_url: https://pypi.org/project/pyelftools
+  version: '0.29'
+  license: Unlicense
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/20417/default_a3f7b5f8d2808a62e9d8a7dcb16a76a48aed59a6.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements.txt
+  detection_source: ci/builder/requirements.txt
+  last_updated_by: umanwizard
+  last_updated_on: 2023-06-16 21:32:53.000000000 Z
+- name: python-frontmatter
+  description: Parse and manage posts with YAML
+  package_url: https://pypi.org/project/python-frontmatter
+  version: 1.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/pypi/image.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements.txt
+  detection_source: ci/builder/requirements.txt
+  last_updated_by: Philip Stoev
+  last_updated_on: 2022-10-11 10:44:47.000000000 Z
+- name: setuptools
+  description: Easily download
+  package_url: https://pypi.org/project/setuptools
+  version: 67.8.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/19831/default_65d1c12a133e1aa67ae96a1221c9c122ddf86c5f.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements-core.txt
+  detection_source: ci/builder/requirements-core.txt
+  last_updated_by: Aru Sahni
+  last_updated_on: 2023-11-13 21:33:15.000000000 Z
+- name: sqlparse
+  description: Non-validating SQL parser
+  package_url: https://pypi.org/project/sqlparse
+  version: 0.4.4
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/20039/default_a7a70921d2d3189665c78015850dc968f41705a1.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements.txt
+  detection_source: ci/builder/requirements.txt
+  last_updated_by: Dennis Felsing
+  last_updated_on: 2023-05-11 22:17:39.000000000 Z
+- name: twine
+  description: Collection of utilities for publishing packages on PyPI
+  package_url: https://pypi.org/project/twine
+  version: 4.0.2
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/19935/default_63c8e7696ded615c51302c06e54b0d0c8ae9af3f.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements.txt
+  detection_source: ci/builder/requirements.txt
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2022-12-05 02:59:41.000000000 Z
+- name: typing-extensions
+  description: Backported and Experimental Type Hints for Python 3.5+
+  package_url: https://pypi.org/project/typing-extensions
+  version: 4.7.0
+  license: Python-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/19875/default_2270bfab784e3d2c2d999d26b11ee478a9dad238.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements.txt
+  detection_source: ci/builder/requirements.txt
+  last_updated_by: Dennis Felsing
+  last_updated_on: 2023-06-28 15:24:45.000000000 Z
+- name: yamllint
+  description: A linter for YAML files
+  package_url: https://pypi.org/project/yamllint
+  version: 1.33.0
+  license: GPL-3.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/20506/default_dcfd16fdf7f5ec686bd8934c31e6383c6da8356b.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/ci/builder/requirements.txt
+  detection_source: ci/builder/requirements.txt
+  last_updated_by: nrainer-materialize
+  last_updated_on: 2023-12-19 10:23:52.000000000 Z
+- name: "@babel/core"
+  description: Babel compiler core
+  package_url: https://www.npmjs.com/@babel/core
+  version: 7.23.3
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15810/default_004658cda9b38934f2871435e9dc15608c86e8be.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/test/lang/js/yarn.lock
+  detection_source: test/lang/js/package.json
+  last_updated_by: Petros Angelatos
+  last_updated_on: 2021-10-12 10:28:45.000000000 Z
+- name: "@babel/preset-env"
+  description: A Babel preset for each environment
+  package_url: https://www.npmjs.com/@babel/preset-env
+  version: 7.23.3
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15819/default_98aa227f51aa9d787815ec3fd98d0ab2bfebbb91.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/test/lang/js/yarn.lock
+  detection_source: test/lang/js/package.json
+  last_updated_by: Petros Angelatos
+  last_updated_on: 2021-10-12 10:28:45.000000000 Z
+- name: "@babel/preset-typescript"
+  description: Babel preset for TypeScript
+  package_url: https://www.npmjs.com/@babel/preset-typescript
+  version: 7.23.3
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16084/default_d4e765f8a43dcfd232c8b9ee9732058bc27c727a.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/test/lang/js/yarn.lock
+  detection_source: test/lang/js/package.json
+  last_updated_by: Petros Angelatos
+  last_updated_on: 2021-10-12 10:28:45.000000000 Z
+- name: "@types/jest"
+  description: TypeScript definitions for Jest
+  package_url: https://www.npmjs.com/@types/jest
+  version: 27.5.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15840/default_004658cda9b38934f2871435e9dc15608c86e8be.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/test/lang/js/yarn.lock
+  detection_source: test/lang/js/package.json
+  last_updated_by: Petros Angelatos
+  last_updated_on: 2021-10-12 10:28:45.000000000 Z
+- name: "@types/pg"
+  description: TypeScript definitions for pg
+  package_url: https://www.npmjs.com/@types/pg
+  version: 7.14.11
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17947/default_fc5f66cf44024e173fd07c415d4f30ca58b4cbad.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/test/lang/js/yarn.lock
+  detection_source: test/lang/js/package.json
+  last_updated_by: Petros Angelatos
+  last_updated_on: 2021-10-12 10:28:45.000000000 Z
+- name: babel-jest
+  description: Jest plugin to use babel for transformation
+  package_url: https://www.npmjs.com/babel-jest
+  version: 27.5.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15839/default_4479dbac220be99e50e724b2df6cf415241d71fd.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/test/lang/js/yarn.lock
+  detection_source: test/lang/js/package.json
+  last_updated_by: Petros Angelatos
+  last_updated_on: 2021-10-12 10:28:45.000000000 Z
+- name: pg
+  description: PostgreSQL client - pure javascript &amp; libpq with the same API
+  package_url: https://www.npmjs.com/pg
+  version: 8.11.3
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16197/default_3d197518f6bb529bfcc1b685e2cefbdfe83ff108.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/test/lang/js/yarn.lock
+  detection_source: test/lang/js/package.json
+  last_updated_by: Nikhil Benesch
+  last_updated_on: 2020-04-11 19:10:39.000000000 Z
+- name: org.postgresql:postgresql
+  description: The PostgreSQL Driver JDBC4
+  version: 42.6.0
+  license: BSD-2-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/test/lang/java/smoketest/pom.xml
+  detection_source: test/lang/java/smoketest/pom.xml
+  last_updated_by: Nikhil Benesch
+  last_updated_on: 2020-07-31 05:09:32.000000000 Z
+  vulnerabilities:
+  - name: org.postgresql:postgresql vulnerable to SQL Injection via line comment generation
+    cve_id: CVE-2024-1597
+    cve_url: https://github.com/advisories/GHSA-24rp-q3w6-vc56
+    detected_date: Feb 22
+    severity: critical
+    first_patched: 42.6.1
+  - name: 'Duplicate Advisory: SQL injection in pgjdbc'
+    cve_id:
+    cve_url: https://github.com/advisories/GHSA-xfg6-62px-cxc2
+    detected_date: Feb 21
+    severity: critical
+    first_patched: 42.6.1
+- name: org.junit.jupiter:junit-jupiter-engine
+  description: Module "junit-jupiter-engine" of JUnit 5
+  version: 5.6.2
+  license: EPL-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/test/lang/java/smoketest/pom.xml
+  detection_source: test/lang/java/smoketest/pom.xml
+  last_updated_by: Nikhil Benesch
+  last_updated_on: 2020-07-31 05:09:32.000000000 Z
+- name: test-unit
+  description: Test-unit
+  package_url: https://rubygems.org/test-unit
+  version: 3.6.1
+  license: Ruby,Python-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/18844/default_1c2935fa69cec14d38adad302e002464101cd71f.png
+  detection_source_url: https://github.com/Sowhat999/materialize/blob/main/test/lang/ruby/Gemfile.lock
+  detection_source: test/lang/ruby/Gemfile
+  last_updated_by: Nikhil Benesch
+  last_updated_on: 2023-11-11 06:45:03.000000000 Z
