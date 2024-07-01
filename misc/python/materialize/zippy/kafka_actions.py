@@ -7,7 +7,6 @@
 # the Business Source License, use of this software will be governed
 # by the Apache License, Version 2.0.
 
-import random
 import string
 import threading
 from textwrap import dedent
@@ -18,6 +17,7 @@ from materialize.mzcompose.composition import Composition
 from materialize.zippy.framework import Action, ActionFactory, Capabilities, Capability
 from materialize.zippy.kafka_capabilities import Envelope, KafkaRunning, TopicExists
 from materialize.zippy.mz_capabilities import MzIsRunning
+import secrets
 
 SCHEMA = """
 $ set keyschema={
@@ -92,11 +92,10 @@ class CreateTopicParameterized(ActionFactory):
                     capabilities=capabilities,
                     topic=TopicExists(
                         name=new_topic_name,
-                        envelope=random.choices(
-                            list(self.envelopes_with_weights.keys()),
+                        envelope=secrets.SystemRandom().choices(list(self.envelopes_with_weights.keys()),
                             weights=list(self.envelopes_with_weights.values()),
                         )[0],
-                        partitions=random.randint(1, 10),
+                        partitions=secrets.SystemRandom().randint(1, 10),
                     ),
                 )
             ]
@@ -133,11 +132,10 @@ class Ingest(Action):
         return {MzIsRunning, KafkaRunning, TopicExists}
 
     def __init__(self, capabilities: Capabilities) -> None:
-        self.topic = random.choice(capabilities.get(TopicExists))
-        self.delta = random.randint(1, 10000)
+        self.topic = secrets.choice(capabilities.get(TopicExists))
+        self.delta = secrets.SystemRandom().randint(1, 10000)
         # This gives 67% pads of up to 10 bytes, 25% of up to 100 bytes and outliers up to 256 bytes
-        self.pad = min(np.random.zipf(1.6, 1)[0], 256) * random.choice(
-            string.ascii_letters
+        self.pad = min(np.random.zipf(1.6, 1)[0], 256) * secrets.choice(string.ascii_letters
         )
         super().__init__(capabilities)
 

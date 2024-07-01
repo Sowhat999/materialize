@@ -8,7 +8,6 @@
 # by the Apache License, Version 2.0.
 
 
-import random
 from textwrap import dedent
 
 from materialize.mzcompose.composition import Composition
@@ -19,6 +18,7 @@ from materialize.zippy.pg_cdc_capabilities import PostgresCdcTableExists
 from materialize.zippy.postgres_capabilities import PostgresRunning, PostgresTableExists
 from materialize.zippy.replica_capabilities import source_capable_clusters
 from materialize.zippy.storaged_capabilities import StoragedRunning
+import secrets
 
 
 class CreatePostgresCdcTable(Action):
@@ -35,10 +35,10 @@ class CreatePostgresCdcTable(Action):
         }
 
     def __init__(self, capabilities: Capabilities) -> None:
-        postgres_table = random.choice(capabilities.get(PostgresTableExists))
+        postgres_table = secrets.choice(capabilities.get(PostgresTableExists))
         postgres_pg_cdc_name = f"postgres_{postgres_table.name}"
         this_postgres_cdc_table = PostgresCdcTableExists(name=postgres_pg_cdc_name)
-        cluster_name = random.choice(source_capable_clusters(capabilities))
+        cluster_name = secrets.choice(source_capable_clusters(capabilities))
 
         existing_postgres_cdc_tables = [
             s

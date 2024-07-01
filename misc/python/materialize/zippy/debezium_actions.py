@@ -8,7 +8,6 @@
 # by the Apache License, Version 2.0.
 
 
-import random
 from textwrap import dedent
 
 from materialize.mzcompose.composition import Composition
@@ -23,6 +22,7 @@ from materialize.zippy.kafka_capabilities import KafkaRunning
 from materialize.zippy.mz_capabilities import MzIsRunning
 from materialize.zippy.replica_capabilities import source_capable_clusters
 from materialize.zippy.storaged_capabilities import StoragedRunning
+import secrets
 
 
 class DebeziumStart(Action):
@@ -64,8 +64,8 @@ class CreateDebeziumSource(Action):
 
     def __init__(self, capabilities: Capabilities) -> None:
         # To avoid conflicts, we make sure the postgres table and the debezium source have matching names
-        postgres_table = random.choice(capabilities.get(PostgresTableExists))
-        cluster_name = random.choice(source_capable_clusters(capabilities))
+        postgres_table = secrets.choice(capabilities.get(PostgresTableExists))
+        cluster_name = secrets.choice(source_capable_clusters(capabilities))
         debezium_source_name = f"debezium_source_{postgres_table.name}"
         this_debezium_source = DebeziumSourceExists(name=debezium_source_name)
 

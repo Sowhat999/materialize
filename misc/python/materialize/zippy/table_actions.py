@@ -7,7 +7,6 @@
 # the Business Source License, use of this software will be governed
 # by the Apache License, Version 2.0.
 
-import random
 from textwrap import dedent
 
 from materialize.mzcompose.composition import Composition
@@ -15,6 +14,7 @@ from materialize.zippy.balancerd_capabilities import BalancerdIsRunning
 from materialize.zippy.framework import Action, ActionFactory, Capabilities, Capability
 from materialize.zippy.mz_capabilities import MzIsRunning
 from materialize.zippy.table_capabilities import TableExists
+import secrets
 
 MAX_ROWS_PER_ACTION = 10000
 
@@ -41,7 +41,7 @@ class CreateTableParameterized(ActionFactory):
                     capabilities=capabilities,
                     table=TableExists(
                         name=new_table_name,
-                        has_index=random.choice([True, False]),
+                        has_index=secrets.choice([True, False]),
                         max_rows_per_action=self.max_rows_per_action,
                     ),
                 )
@@ -97,9 +97,9 @@ class ValidateTable(Action):
         if table is not None:
             self.table = table
         else:
-            self.table = random.choice(capabilities.get(TableExists))
+            self.table = secrets.choice(capabilities.get(TableExists))
 
-        self.select_limit = random.choices([True, False], weights=[0.2, 0.8], k=1)[0]
+        self.select_limit = secrets.SystemRandom().choices([True, False], weights=[0.2, 0.8], k=1)[0]
         super().__init__(capabilities)
 
     def run(self, c: Composition) -> None:
@@ -136,8 +136,8 @@ class DML(Action):
         return {BalancerdIsRunning, MzIsRunning, TableExists}
 
     def __init__(self, capabilities: Capabilities) -> None:
-        self.table = random.choice(capabilities.get(TableExists))
-        self.delta = random.randint(1, self.table.max_rows_per_action)
+        self.table = secrets.choice(capabilities.get(TableExists))
+        self.delta = secrets.SystemRandom().randint(1, self.table.max_rows_per_action)
         super().__init__(capabilities)
 
     def __str__(self) -> str:

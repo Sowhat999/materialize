@@ -8,13 +8,13 @@
 # by the Apache License, Version 2.0.
 
 import os
-import random
 
 from materialize.mzcompose import DEFAULT_MZ_VOLUMES
 from materialize.mzcompose.service import (
     Service,
     ServiceDependency,
 )
+import secrets
 
 
 class Testdrive(Service):
@@ -121,7 +121,7 @@ class Testdrive(Service):
         if seed is not None and consistent_seed:
             raise RuntimeError("Can't pass `seed` and `consistent_seed` at same time")
         elif consistent_seed:
-            entrypoint.append(f"--seed={random.getrandbits(32)}")
+            entrypoint.append(f"--seed={secrets.SystemRandom().getrandbits(32)}")
         elif seed is not None:
             entrypoint.append(f"--seed={seed}")
 

@@ -13,16 +13,16 @@ from __future__ import annotations
 
 import json
 import os
-import random
 from enum import Enum
 from pathlib import Path
 from typing import TypeVar
+import secrets
 
 MZ_ROOT = Path(os.environ["MZ_ROOT"])
 
 
 def nonce(digits: int) -> str:
-    return "".join(random.choice("0123456789abcdef") for _ in range(digits))
+    return "".join(secrets.choice("0123456789abcdef") for _ in range(digits))
 
 
 T = TypeVar("T")

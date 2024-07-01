@@ -7,7 +7,6 @@
 # the Business Source License, use of this software will be governed
 # by the Apache License, Version 2.0.
 
-import random
 
 from materialize.output_consistency.common.configuration import (
     ConsistencyTestConfiguration,
@@ -20,12 +19,13 @@ from materialize.output_consistency.operation.operation import (
     DbOperationOrFunction,
     OperationRelevance,
 )
+import secrets
 
 
 class RandomizedPicker:
     def __init__(self, config: ConsistencyTestConfiguration):
         self.config = config
-        random.seed(self.config.random_seed)
+        secrets.SystemRandom().seed(self.config.random_seed)
 
     def random_boolean(self, probability_for_true: float) -> bool:
         assert (
@@ -33,31 +33,30 @@ class RandomizedPicker:
         ), f"Invalid probability: {probability_for_true}"
 
         weights = [probability_for_true, 1 - probability_for_true]
-        return random.choices([True, False], k=1, weights=weights)[0]
+        return secrets.SystemRandom().choices([True, False], k=1, weights=weights)[0]
 
     def random_number(self, min_value_incl: int, max_value_incl: int) -> int:
-        return random.randint(min_value_incl, max_value_incl)
+        return secrets.SystemRandom().randint(min_value_incl, max_value_incl)
 
     def random_operation(
         self, operations: list[DbOperationOrFunction], weights: list[float]
     ) -> DbOperationOrFunction:
-        return random.choices(operations, k=1, weights=weights)[0]
+        return secrets.SystemRandom().choices(operations, k=1, weights=weights)[0]
 
     def random_type_with_values(
         self, types_with_values: list[DataTypeWithValues]
     ) -> DataTypeWithValues:
-        return random.choice(types_with_values)
+        return secrets.choice(types_with_values)
 
     def random_row_indices(
         self, vertical_storage_row_count: int, max_number_of_rows_to_select: int
     ) -> set[int]:
-        selected_rows = random.choices(
-            range(0, vertical_storage_row_count), k=max_number_of_rows_to_select
+        selected_rows = secrets.SystemRandom().choices(range(0, vertical_storage_row_count), k=max_number_of_rows_to_select
         )
         return set(selected_rows)
 
     def random_value(self, values: list[DataValue]) -> DataValue:
-        return random.choice(values)
+        return secrets.choice(values)
 
     def convert_operation_relevance_to_number(
         self, relevance: OperationRelevance
@@ -72,4 +71,4 @@ class RandomizedPicker:
             raise RuntimeError(f"Unexpected value: {relevance}")
 
     def _random_bool(self, probability: float) -> bool:
-        return random.random() < probability
+        return secrets.SystemRandom().random() < probability

@@ -7,7 +7,6 @@
 # the Business Source License, use of this software will be governed
 # by the Apache License, Version 2.0.
 
-import random
 import time
 from collections.abc import Iterator
 from enum import Enum
@@ -17,6 +16,7 @@ from materialize.data_ingest.field import Field
 from materialize.data_ingest.rowlist import RowList
 from materialize.data_ingest.transaction import Transaction
 from materialize.mzcompose.composition import Composition
+import secrets
 
 
 class TransactionSize(Enum):
@@ -57,7 +57,7 @@ class RestartMz(TransactionDef):
         self.probability = probability
 
     def generate(self, fields: list[Field]) -> Iterator[Transaction | None]:
-        if random.random() < self.probability:
+        if secrets.SystemRandom().random() < self.probability:
             self.composition.kill("materialized")
             time.sleep(1)
             self.composition.up("materialized")

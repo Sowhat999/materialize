@@ -18,6 +18,7 @@ from materialize.checks.common import KAFKA_SCHEMA_WITH_SINGLE_STRING_FIELD
 from materialize.checks.executors import Executor
 from materialize.mz_version import MzVersion
 from materialize.util import naughty_strings
+import secrets
 
 
 def dq(ident: str) -> str:
@@ -76,7 +77,7 @@ class Identifiers(Check):
 
     def __init__(self, base_version: MzVersion, rng: Random | None) -> None:
         strings = naughty_strings()
-        values = (rng or Random(0)).sample(strings, len(self.IDENT_KEYS))
+        values = (rng or secrets.SystemRandom().Random(0)).sample(strings, len(self.IDENT_KEYS))
         self.ident = {
             key: value.encode("utf-8")[:255].decode("utf-8", "ignore")
             for key, value in zip(self.IDENT_KEYS, values)

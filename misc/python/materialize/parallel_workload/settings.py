@@ -7,8 +7,8 @@
 # the Business Source License, use of this software will be governed
 # by the Apache License, Version 2.0.
 
-import random
 from enum import Enum
+import secrets
 
 
 class Complexity(Enum):
@@ -19,7 +19,7 @@ class Complexity(Enum):
     @classmethod
     def _missing_(cls, value):
         if value == "random":
-            return cls(random.choice([elem.value for elem in cls]))
+            return cls(secrets.choice([elem.value for elem in cls]))
 
 
 class Scenario(Enum):
@@ -33,4 +33,4 @@ class Scenario(Enum):
     @classmethod
     def _missing_(cls, value):
         if value == "random":
-            return cls(random.choice([elem.value for elem in cls]))
+            return cls(secrets.choice([elem.value for elem in cls]))
