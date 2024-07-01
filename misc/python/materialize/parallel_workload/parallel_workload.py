@@ -10,7 +10,6 @@
 import argparse
 import datetime
 import os
-import random
 import sys
 import threading
 import time
@@ -49,6 +48,7 @@ from materialize.parallel_workload.database import (
 from materialize.parallel_workload.executor import Executor, initialize_logging
 from materialize.parallel_workload.settings import Complexity, Scenario
 from materialize.parallel_workload.worker import Worker
+import secrets
 
 SEED_RANGE = 1_000_000
 REPORT_TIME = 10
@@ -70,7 +70,7 @@ def run(
 ) -> None:
     num_threads = num_threads or os.cpu_count() or 10
 
-    rng = random.Random(random.randrange(SEED_RANGE))
+    rng = secrets.SystemRandom().Random(secrets.SystemRandom().randrange(SEED_RANGE))
 
     print(
         f"+++ Running with: --seed={seed} --threads={num_threads} --runtime={runtime} --complexity={complexity.value} --scenario={scenario.value} {'--naughty-identifiers ' if naughty_identifiers else ''} {'--fast-startup' if fast_startup else ''}(--host={host})"
@@ -155,7 +155,7 @@ def run(
             weights = [60, 30, 0, 0, 0]
         else:
             raise ValueError(f"Unknown complexity {complexity}")
-        worker_rng = random.Random(rng.randrange(SEED_RANGE))
+        worker_rng = secrets.SystemRandom().Random(rng.randrange(SEED_RANGE))
         action_list = worker_rng.choices(
             [
                 read_action_list,
@@ -195,7 +195,7 @@ def run(
         threads.append(thread)
 
     if scenario == Scenario.Cancel:
-        worker_rng = random.Random(rng.randrange(SEED_RANGE))
+        worker_rng = secrets.SystemRandom().Random(rng.randrange(SEED_RANGE))
         worker = Worker(
             worker_rng,
             [CancelAction(worker_rng, composition, workers)],
@@ -214,7 +214,7 @@ def run(
         thread.start()
         threads.append(thread)
     elif scenario == Scenario.Kill:
-        worker_rng = random.Random(rng.randrange(SEED_RANGE))
+        worker_rng = secrets.SystemRandom().Random(rng.randrange(SEED_RANGE))
         assert composition, "Kill scenario only works in mzcompose"
         worker = Worker(
             worker_rng,
@@ -241,7 +241,7 @@ def run(
             )
             return params
 
-        worker_rng = random.Random(rng.randrange(SEED_RANGE))
+        worker_rng = secrets.SystemRandom().Random(rng.randrange(SEED_RANGE))
         assert composition, "TogglePersistTxn scenario only works in mzcompose"
         worker = Worker(
             worker_rng,
@@ -269,7 +269,7 @@ def run(
         thread.start()
         threads.append(thread)
     elif scenario == Scenario.BackupRestore:
-        worker_rng = random.Random(rng.randrange(SEED_RANGE))
+        worker_rng = secrets.SystemRandom().Random(rng.randrange(SEED_RANGE))
         assert composition, "Backup & Restore scenario only works in mzcompose"
         worker = Worker(
             worker_rng,
@@ -294,7 +294,7 @@ def run(
         raise ValueError(f"Unknown scenario {scenario}")
 
     if False:  # sanity check for debugging
-        worker_rng = random.Random(rng.randrange(SEED_RANGE))
+        worker_rng = secrets.SystemRandom().Random(rng.randrange(SEED_RANGE))
         worker = Worker(
             worker_rng,
             [StatisticsAction(worker_rng, composition)],
@@ -464,7 +464,7 @@ def main() -> int:
             cur.execute(f"ALTER SYSTEM SET {key} = '{value}'")
     system_conn.close()
 
-    random.seed(args.seed)
+    secrets.SystemRandom().seed(args.seed)
 
     run(
         args.host,

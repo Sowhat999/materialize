@@ -7,7 +7,6 @@
 # the Business Source License, use of this software will be governed
 # by the Apache License, Version 2.0.
 
-import random
 from textwrap import dedent
 
 from materialize.mzcompose.composition import Composition
@@ -20,6 +19,7 @@ from materialize.zippy.source_capabilities import SourceExists
 from materialize.zippy.storaged_capabilities import StoragedRunning
 from materialize.zippy.table_capabilities import TableExists
 from materialize.zippy.view_capabilities import ViewExists, WatermarkedObjects
+import secrets
 
 
 class CreateViewParameterized(ActionFactory):
@@ -58,9 +58,8 @@ class CreateViewParameterized(ActionFactory):
             ]:
                 potential_inputs.extend(capabilities.get(source_capability))
 
-            inputs = random.sample(
-                potential_inputs,
-                min(len(potential_inputs), random.randint(1, self.max_inputs)),
+            inputs = secrets.SystemRandom().sample(potential_inputs,
+                min(len(potential_inputs), secrets.SystemRandom().randint(1, self.max_inputs)),
             )
 
             return [
@@ -68,7 +67,7 @@ class CreateViewParameterized(ActionFactory):
                     capabilities=capabilities,
                     view=ViewExists(
                         name=new_view_name,
-                        has_index=random.choice([True, False]),
+                        has_index=secrets.choice([True, False]),
                         expensive_aggregates=self.expensive_aggregates,
                         inputs=inputs,
                     ),
@@ -133,12 +132,12 @@ class ValidateView(Action):
         self, capabilities: Capabilities, view: ViewExists | None = None
     ) -> None:
         if view is None:
-            self.view = random.choice(capabilities.get(ViewExists))
+            self.view = secrets.choice(capabilities.get(ViewExists))
         else:
             self.view = view
 
         # Trigger the PeekPersist optimization
-        self.select_limit = random.choice(["", "LIMIT 1"])
+        self.select_limit = secrets.choice(["", "LIMIT 1"])
         super().__init__(capabilities)
 
     def run(self, c: Composition) -> None:

@@ -7,7 +7,6 @@
 # the Business Source License, use of this software will be governed
 # by the Apache License, Version 2.0.
 
-from random import Random
 
 from materialize.checks.actions import Action, Initialize, Manipulate, Validate
 from materialize.checks.checks import Check
@@ -37,6 +36,7 @@ from materialize.checks.mzcompose_actions import (
     RestartSourcePostgres as RestartSourcePostgresAction,
 )
 from materialize.mz_version import MzVersion
+import secrets
 
 
 class Scenario:
@@ -45,7 +45,7 @@ class Scenario:
     ) -> None:
         self._checks = checks
         self.executor = executor
-        self.rng = None if seed is None else Random(seed)
+        self.rng = None if seed is None else secrets.SystemRandom().Random(seed)
         self._base_version = MzVersion.parse_cargo()
 
         filtered_check_classes = []

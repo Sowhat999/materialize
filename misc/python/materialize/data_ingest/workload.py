@@ -7,7 +7,6 @@
 # the Business Source License, use of this software will be governed
 # by the Apache License, Version 2.0.
 
-import random
 import time
 from collections.abc import Iterator
 from typing import Any
@@ -33,6 +32,7 @@ from materialize.data_ingest.transaction_def import (
 )
 from materialize.mzcompose.composition import Composition
 from materialize.util import all_subclasses
+import secrets
 
 
 class Workload:
@@ -156,10 +156,10 @@ def execute_workload(
 ) -> None:
     fields = []
 
-    for i in range(random.randint(1, 10)):
-        fields.append(Field(f"key{i}", random.choice(DATA_TYPES_FOR_AVRO), True))
-    for i in range(random.randint(0, 20)):
-        fields.append(Field(f"value{i}", random.choice(DATA_TYPES_FOR_AVRO), False))
+    for i in range(secrets.SystemRandom().randint(1, 10)):
+        fields.append(Field(f"key{i}", secrets.choice(DATA_TYPES_FOR_AVRO), True))
+    for i in range(secrets.SystemRandom().randint(0, 20)):
+        fields.append(Field(f"value{i}", secrets.choice(DATA_TYPES_FOR_AVRO), False))
     print(f"With fields: {fields}")
 
     executors = [

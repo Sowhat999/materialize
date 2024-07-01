@@ -7,12 +7,12 @@
 # the Business Source License, use of this software will be governed
 # by the Apache License, Version 2.0.
 
-import random
 from collections.abc import Sequence
 from datetime import datetime, timedelta
 from typing import TYPE_CHECKING, TypeVar, Union
 
 from materialize.mzcompose.composition import Composition
+import secrets
 
 if TYPE_CHECKING:
     from materialize.zippy.scenarios import Scenario
@@ -89,7 +89,7 @@ class Capabilities:
         existing_object_names = self.get_capability_names(capability)
         remaining_object_names = set(all_object_names) - set(existing_object_names)
         return (
-            random.choice(list(remaining_object_names))
+            secrets.choice(list(remaining_object_names))
             if len(remaining_object_names) > 0
             else None
         )
@@ -248,7 +248,7 @@ class Test:
             len(actions_or_factories) > 0
         ), "No actions available to take. You may be stopping or deleting items without starting them again."
 
-        return random.choices(actions_or_factories, weights=class_weights, k=1)[0]
+        return secrets.SystemRandom().choices(actions_or_factories, weights=class_weights, k=1)[0]
 
     def _can_run(self, action: ActionOrFactory) -> bool:
         if any(

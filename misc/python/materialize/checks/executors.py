@@ -7,7 +7,6 @@
 # the Business Source License, use of this software will be governed
 # by the Apache License, Version 2.0.
 
-import random
 import threading
 from inspect import Traceback
 from typing import Any
@@ -15,6 +14,7 @@ from typing import Any
 from materialize.cloudtest.app.materialize_application import MaterializeApplication
 from materialize.mz_version import MzVersion
 from materialize.mzcompose.composition import Composition
+import secrets
 
 
 class Executor:
@@ -87,7 +87,7 @@ class MzcomposeExecutorParallel(MzcomposeExecutor):
 class CloudtestExecutor(Executor):
     def __init__(self, application: MaterializeApplication, version: MzVersion) -> None:
         self.application = application
-        self.seed = random.getrandbits(32)
+        self.seed = secrets.SystemRandom().getrandbits(32)
         self.current_mz_version = version
 
     def cloudtest_application(self) -> MaterializeApplication:

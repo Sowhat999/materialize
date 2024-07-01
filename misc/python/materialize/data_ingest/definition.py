@@ -7,7 +7,6 @@
 # the Business Source License, use of this software will be governed
 # by the Apache License, Version 2.0.
 
-import random
 from collections.abc import Iterator
 from enum import Enum
 
@@ -15,8 +14,9 @@ from materialize.data_ingest.data_type import RecordSize
 from materialize.data_ingest.field import Field
 from materialize.data_ingest.row import Operation, Row
 from materialize.data_ingest.rowlist import RowList
+import secrets
 
-rng = random.Random()
+rng = secrets.SystemRandom().Random()
 
 
 class Records(Enum):

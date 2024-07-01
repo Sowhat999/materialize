@@ -7,7 +7,6 @@
 # the Business Source License, use of this software will be governed
 # by the Apache License, Version 2.0.
 
-import random
 from textwrap import dedent
 
 from materialize.mzcompose.composition import Composition
@@ -18,6 +17,7 @@ from materialize.zippy.mz_capabilities import MzIsRunning
 from materialize.zippy.replica_capabilities import source_capable_clusters
 from materialize.zippy.source_capabilities import SourceExists
 from materialize.zippy.storaged_capabilities import StoragedRunning
+import secrets
 
 
 class CreateSourceParameterized(ActionFactory):
@@ -47,11 +47,10 @@ class CreateSourceParameterized(ActionFactory):
                     capabilities=capabilities,
                     source=SourceExists(
                         name=new_source_name,
-                        topic=random.choice(capabilities.get(TopicExists)),
-                        cluster_name=random.choice(
-                            source_capable_clusters(capabilities)
+                        topic=secrets.choice(capabilities.get(TopicExists)),
+                        cluster_name=secrets.choice(source_capable_clusters(capabilities)
                         ),
-                        uses_ssh_tunnel=random.choice([True, False]),
+                        uses_ssh_tunnel=secrets.choice([True, False]),
                     ),
                 )
             ]

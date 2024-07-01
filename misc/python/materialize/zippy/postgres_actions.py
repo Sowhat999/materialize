@@ -7,7 +7,6 @@
 # the Business Source License, use of this software will be governed
 # by the Apache License, Version 2.0.
 
-import random
 from textwrap import dedent
 
 from materialize.mzcompose.composition import Composition
@@ -15,6 +14,7 @@ from materialize.zippy.balancerd_capabilities import BalancerdIsRunning
 from materialize.zippy.framework import Action, Capabilities, Capability
 from materialize.zippy.mz_capabilities import MzIsRunning
 from materialize.zippy.postgres_capabilities import PostgresRunning, PostgresTableExists
+import secrets
 
 
 class PostgresStart(Action):
@@ -58,7 +58,7 @@ class CreatePostgresTable(Action):
 
     def __init__(self, capabilities: Capabilities) -> None:
         this_postgres_table = PostgresTableExists(
-            name="table" + str(random.randint(1, 10))
+            name="table" + str(secrets.SystemRandom().randint(1, 10))
         )
 
         existing_postgres_tables = [
@@ -110,8 +110,8 @@ class PostgresDML(Action):
         return {BalancerdIsRunning, MzIsRunning, PostgresRunning, PostgresTableExists}
 
     def __init__(self, capabilities: Capabilities) -> None:
-        self.postgres_table = random.choice(capabilities.get(PostgresTableExists))
-        self.delta = random.randint(1, PostgresDML.MAX_BATCH_SIZE)
+        self.postgres_table = secrets.choice(capabilities.get(PostgresTableExists))
+        self.delta = secrets.SystemRandom().randint(1, PostgresDML.MAX_BATCH_SIZE)
 
         super().__init__(capabilities)
 

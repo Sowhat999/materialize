@@ -8,11 +8,11 @@
 # by the Apache License, Version 2.0.
 
 
-import random
 
 from materialize.mzcompose.service import (
     Service,
 )
+import secrets
 
 
 class Toxiproxy(Service):
@@ -21,7 +21,7 @@ class Toxiproxy(Service):
         name: str = "toxiproxy",
         image: str = "shopify/toxiproxy:2.1.4",
         port: int = 8474,
-        seed: int = random.randrange(2**63),
+        seed: int = secrets.SystemRandom().randrange(2**63),
     ) -> None:
         super().__init__(
             name=name,

@@ -7,7 +7,6 @@
 # the Business Source License, use of this software will be governed
 # by the Apache License, Version 2.0.
 
-import random
 from textwrap import dedent
 
 from materialize.mzcompose.composition import Composition
@@ -18,6 +17,7 @@ from materialize.zippy.replica_capabilities import source_capable_clusters
 from materialize.zippy.sink_capabilities import SinkExists
 from materialize.zippy.storaged_capabilities import StoragedRunning
 from materialize.zippy.view_capabilities import ViewExists
+import secrets
 
 
 class CreateSinkParameterized(ActionFactory):
@@ -36,9 +36,9 @@ class CreateSinkParameterized(ActionFactory):
         )
 
         if new_sink_name:
-            source_view = random.choice(capabilities.get(ViewExists))
-            cluster_name_out = random.choice(source_capable_clusters(capabilities))
-            cluster_name_in = random.choice(source_capable_clusters(capabilities))
+            source_view = secrets.choice(capabilities.get(ViewExists))
+            cluster_name_out = secrets.choice(source_capable_clusters(capabilities))
+            cluster_name_in = secrets.choice(source_capable_clusters(capabilities))
 
             dest_view = ViewExists(
                 name=f"{new_sink_name}_view",

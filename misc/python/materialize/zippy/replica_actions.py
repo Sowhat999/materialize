@@ -7,13 +7,13 @@
 # the Business Source License, use of this software will be governed
 # by the Apache License, Version 2.0.
 
-import random
 from textwrap import dedent
 
 from materialize.mzcompose.composition import Composition
 from materialize.zippy.framework import Action, Capabilities, Capability
 from materialize.zippy.mz_capabilities import MzIsRunning
 from materialize.zippy.replica_capabilities import ReplicaExists, ReplicaSizeType
+import secrets
 
 
 class DropDefaultReplica(Action):
@@ -45,7 +45,7 @@ class CreateReplica(Action):
         return {MzIsRunning}
 
     def __init__(self, capabilities: Capabilities) -> None:
-        this_replica = ReplicaExists(name="replica" + str(random.randint(1, 4)))
+        this_replica = ReplicaExists(name="replica" + str(secrets.SystemRandom().randint(1, 4)))
 
         existing_replicas = [
             t for t in capabilities.get(ReplicaExists) if t.name == this_replica.name
@@ -59,9 +59,9 @@ class CreateReplica(Action):
                 ReplicaSizeType.Workers,
                 ReplicaSizeType.Both,
             ]
-            size_type = random.choice(size_types)
+            size_type = secrets.choice(size_types)
 
-            size = str(random.choice([2, 4]))
+            size = str(secrets.choice([2, 4]))
             if size_type is ReplicaSizeType.Nodes:
                 this_replica.size = size + "-1"
             elif size_type is ReplicaSizeType.Workers:
@@ -113,7 +113,7 @@ class DropReplica(Action):
         existing_replicas = capabilities.get(ReplicaExists)
 
         if len(existing_replicas) > 1:
-            self.replica = random.choice(existing_replicas)
+            self.replica = secrets.choice(existing_replicas)
             capabilities.remove_capability_instance(self.replica)
         else:
             self.replica = None
